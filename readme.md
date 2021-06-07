@@ -59,8 +59,10 @@ This demo uses 15 docker images.
 ```
 
 ### Explore Control Center
-      http://192.168.1.110:9021/
-      Log in as userName/password: superUser/superUser
+**Control Center**: http://192.168.1.110:9021/
+Log in as userName/password: superUser/superUser
+
+**Kibana** http://localhost:5601/app/dashboards#/view/Overview
 
 #### Kafka Streaming Platform
 **Distributed System**  
