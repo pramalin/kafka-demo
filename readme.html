@@ -1,0 +1,1574 @@
+<!DOCTYPE html><html><head>
+      <title>readme</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:////home/padhu/.vscode-server/extensions/shd101wyy.markdown-preview-enhanced-0.5.18/node_modules/@shd101wyy/mume/dependencies/katex/katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h2 class="mume-header" id="kafka-streams-demo">Kafka Streams Demo</h2>
+
+<h3 class="mume-header" id="agenda">Agenda</h3>
+
+<ul>
+<li>Demo Overview</li>
+<li>How to run Demo On Prem</li>
+<li>Review Docker Compose file</li>
+<li>Explore Control Center</li>
+<li>Kafka Platform</li>
+<li>Application Development
+<ul>
+<li>Admin</li>
+<li>Producer</li>
+<li>Consumer</li>
+<li>Avro schema</li>
+<li>Streams Topology</li>
+<li>Streams API</li>
+</ul>
+</li>
+<li>Review KStream Code</li>
+<li>Q &amp; A</li>
+</ul>
+<h3 class="mume-header" id="demo-overview">Demo Overview</h3>
+
+<p><a href="https://docs.confluent.io/platform/current/tutorials/cp-demo/docs/overview.html">https://docs.confluent.io/platform/current/tutorials/cp-demo/docs/overview.html</a></p>
+<h3 class="mume-header" id="how-to-run-demo-on-prem">How to run Demo On Prem</h3>
+
+<p><a href="https://docs.confluent.io/platform/current/tutorials/cp-demo/docs/on-prem.html">https://docs.confluent.io/platform/current/tutorials/cp-demo/docs/on-prem.html</a></p>
+<h3 class="mume-header" id="review-docker-compose-file">Review Docker Compose file</h3>
+
+<p>This demo uses 15 docker images.<br>
+cp-demo/docker-compose.yml</p>
+<pre data-role="codeBlock" data-info="yml" class="language-yaml">  <span class="token key atrule">zookeeper</span><span class="token punctuation">:</span>
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> $<span class="token punctuation">{</span>REPOSITORY<span class="token punctuation">}</span>/cp<span class="token punctuation">-</span>zookeeper<span class="token punctuation">:</span>$<span class="token punctuation">{</span>CONFLUENT_DOCKER_TAG<span class="token punctuation">}</span>
+  <span class="token key atrule">tools</span><span class="token punctuation">:</span>
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> cnfltraining/training<span class="token punctuation">-</span>tools<span class="token punctuation">:</span><span class="token number">5.5</span>
+  <span class="token key atrule">openldap</span><span class="token punctuation">:</span>
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> osixia/openldap<span class="token punctuation">:</span>1.3.0
+  <span class="token key atrule">kafka1</span><span class="token punctuation">:</span>
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> $<span class="token punctuation">{</span>REPOSITORY<span class="token punctuation">}</span>/cp<span class="token punctuation">-</span>server<span class="token punctuation">:</span>$<span class="token punctuation">{</span>CONFLUENT_DOCKER_TAG<span class="token punctuation">}</span>
+  <span class="token key atrule">kafka2</span><span class="token punctuation">:</span>
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> $<span class="token punctuation">{</span>REPOSITORY<span class="token punctuation">}</span>/cp<span class="token punctuation">-</span>server<span class="token punctuation">:</span>$<span class="token punctuation">{</span>CONFLUENT_DOCKER_TAG<span class="token punctuation">}</span>
+  <span class="token key atrule">connect</span><span class="token punctuation">:</span>
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> localbuild/connect<span class="token punctuation">:</span>$<span class="token punctuation">{</span>CONFLUENT_DOCKER_TAG<span class="token punctuation">}</span><span class="token punctuation">-</span>$<span class="token punctuation">{</span>CONNECTOR_VERSION<span class="token punctuation">}</span>
+  <span class="token key atrule">elasticsearch</span><span class="token punctuation">:</span>
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> docker.elastic.co/elasticsearch/elasticsearch<span class="token punctuation">:</span>5.6.0
+  <span class="token key atrule">kibana</span><span class="token punctuation">:</span>
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> docker.elastic.co/kibana/kibana<span class="token punctuation">:</span>5.5.2
+  <span class="token key atrule">control-center</span><span class="token punctuation">:</span>
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> $<span class="token punctuation">{</span>REPOSITORY<span class="token punctuation">}</span>/cp<span class="token punctuation">-</span>enterprise<span class="token punctuation">-</span>control<span class="token punctuation">-</span>center<span class="token punctuation">:</span>$<span class="token punctuation">{</span>CONFLUENT_DOCKER_TAG<span class="token punctuation">}</span>
+  <span class="token key atrule">schemaregistry</span><span class="token punctuation">:</span>
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> $<span class="token punctuation">{</span>REPOSITORY<span class="token punctuation">}</span>/cp<span class="token punctuation">-</span>schema<span class="token punctuation">-</span>registry<span class="token punctuation">:</span>$<span class="token punctuation">{</span>CONFLUENT_DOCKER_TAG<span class="token punctuation">}</span>
+  <span class="token key atrule">kafka-client</span><span class="token punctuation">:</span>
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> $<span class="token punctuation">{</span>REPOSITORY<span class="token punctuation">}</span>/cp<span class="token punctuation">-</span>server<span class="token punctuation">:</span>$<span class="token punctuation">{</span>CONFLUENT_DOCKER_TAG<span class="token punctuation">}</span>
+  <span class="token key atrule">ksqldb-server</span><span class="token punctuation">:</span>
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> $<span class="token punctuation">{</span>REPOSITORY<span class="token punctuation">}</span>/cp<span class="token punctuation">-</span>ksqldb<span class="token punctuation">-</span>server<span class="token punctuation">:</span>$<span class="token punctuation">{</span>CONFLUENT_DOCKER_TAG<span class="token punctuation">}</span>
+  <span class="token key atrule">ksqldb-cli</span><span class="token punctuation">:</span>
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> $<span class="token punctuation">{</span>REPOSITORY<span class="token punctuation">}</span>/cp<span class="token punctuation">-</span>ksqldb<span class="token punctuation">-</span>cli<span class="token punctuation">:</span>$<span class="token punctuation">{</span>CONFLUENT_DOCKER_TAG<span class="token punctuation">}</span>
+  <span class="token key atrule">restproxy</span><span class="token punctuation">:</span>
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> $<span class="token punctuation">{</span>REPOSITORY<span class="token punctuation">}</span>/cp<span class="token punctuation">-</span>kafka<span class="token punctuation">-</span>rest<span class="token punctuation">:</span>$<span class="token punctuation">{</span>CONFLUENT_DOCKER_TAG<span class="token punctuation">}</span>
+  <span class="token key atrule">streams-demo</span><span class="token punctuation">:</span>
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> cnfldemos/cp<span class="token punctuation">-</span>demo<span class="token punctuation">-</span>kstreams<span class="token punctuation">:</span>0.0.6
+</pre><h3 class="mume-header" id="explore-control-center">Explore Control Center</h3>
+
+<pre class="language-text">  http://192.168.1.110:9021/
+  Log in as userName/password: superUser/superUser
+</pre>
+<h4 class="mume-header" id="kafka-streaming-platform">Kafka Streaming Platform</h4>
+
+<p><strong>Distributed System</strong><br>
+The following diagram illustrates how the Kafka cluster is organized. Kafka cluster is made up of<br>
+multiple hosts called as brokers in a distributed arrangement. Kafka stores the messages in the logical unit<br>
+called Topics. The topics are typically divided into multiple partitions and replicated across several hosts.<br>
+The partitioning, replication and the distribution of messages make Kafka into a highly scalable and resilient<br>
+system.</p>
+<p code_chunk_offset="0" cmd="true" args="[&quot;-E&quot;]"><!--?xml version='1.0' encoding='UTF-8' standalone='no'?-->
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="574" shape-rendering="geometricPrecision" version="1.0">
+  <defs>
+    <filter id="f2" x="0" y="0" width="200%" height="200%">
+      <feOffset result="offOut" in="SourceGraphic" dx="5" dy="5"/>
+      <feGaussianBlur result="blurOut" in="offOut" stdDeviation="3"/>
+      <feBlend in="SourceGraphic" in2="blurOut" mode="normal"/>
+    </filter>
+  </defs>
+  <g stroke-width="1" stroke-linecap="square" stroke-linejoin="round">
+    <rect x="0" y="0" width="880" height="574" style="fill: #ffffff"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M725.0 203.0 L725.0 532.0 Q725.0 539.0 720.0 539.0 L30.0 539.0 L30.0 539.0 Q25.0 539.0 25.0 532.0 L25.0 203.0 L25.0 203.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M45.0 245.0 L45.0 357.0 L705.0 357.0 L705.0 245.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M45.0 413.0 L45.0 525.0 L705.0 525.0 L705.0 413.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M720.0 119.0 Q725.0 119.0 725.0 126.0 L725.0 203.0 L25.0 203.0 L25.0 126.0 Q25.0 119.0 30.0 119.0 L720.0 119.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M65.0 273.0 L65.0 343.0 L345.0 343.0 L345.0 273.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M65.0 441.0 L65.0 511.0 L345.0 511.0 L345.0 441.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M405.0 441.0 L685.0 441.0 L685.0 511.0 L405.0 511.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M405.0 273.0 L405.0 343.0 L685.0 343.0 L685.0 273.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M85.0 301.0 L85.0 329.0 L325.0 329.0 L325.0 301.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M325.0 469.0 L325.0 497.0 L85.0 497.0 L85.0 469.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M425.0 497.0 L665.0 497.0 L665.0 469.0 L425.0 469.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M425.0 301.0 L425.0 329.0 L665.0 329.0 L665.0 301.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M225.0 63.0 L375.0 63.0 L375.0 35.0 L225.0 35.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M45.0 161.0 L45.0 189.0 L155.0 189.0 L155.0 161.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M215.0 161.0 L215.0 189.0 L325.0 189.0 L325.0 161.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M125.0 301.0 L125.0 329.0 L85.0 329.0 L85.0 301.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M165.0 301.0 L165.0 329.0 L125.0 329.0 L125.0 301.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M205.0 301.0 L205.0 329.0 L165.0 329.0 L165.0 301.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M205.0 301.0 L205.0 329.0 L245.0 329.0 L245.0 301.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M285.0 301.0 L285.0 329.0 L245.0 329.0 L245.0 301.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M325.0 301.0 L325.0 329.0 L285.0 329.0 L285.0 301.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M85.0 469.0 L85.0 497.0 L125.0 497.0 L125.0 469.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M165.0 469.0 L165.0 497.0 L125.0 497.0 L125.0 469.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M165.0 469.0 L165.0 497.0 L205.0 497.0 L205.0 469.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M205.0 469.0 L205.0 497.0 L245.0 497.0 L245.0 469.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M245.0 469.0 L245.0 497.0 L285.0 497.0 L285.0 469.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M325.0 469.0 L325.0 497.0 L285.0 497.0 L285.0 469.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M425.0 497.0 L465.0 497.0 L465.0 469.0 L425.0 469.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M465.0 469.0 L465.0 497.0 L505.0 497.0 L505.0 469.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M505.0 497.0 L545.0 497.0 L545.0 469.0 L505.0 469.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M545.0 497.0 L585.0 497.0 L585.0 469.0 L545.0 469.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M585.0 497.0 L625.0 497.0 L625.0 469.0 L585.0 469.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M625.0 469.0 L625.0 497.0 L665.0 497.0 L665.0 469.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M425.0 301.0 L425.0 329.0 L465.0 329.0 L465.0 301.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M465.0 301.0 L465.0 329.0 L505.0 329.0 L505.0 301.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M505.0 301.0 L505.0 329.0 L545.0 329.0 L545.0 301.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M545.0 329.0 L585.0 329.0 L585.0 301.0 L545.0 301.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M585.0 301.0 L585.0 329.0 L625.0 329.0 L625.0 301.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M625.0 301.0 L625.0 329.0 L665.0 329.0 L665.0 301.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="#5555bb" d="M725.0 203.0 L725.0 532.0 Q725.0 539.0 720.0 539.0 L30.0 539.0 L30.0 539.0 Q25.0 539.0 25.0 532.0 L25.0 203.0 L25.0 203.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M45.0 245.0 L45.0 357.0 L705.0 357.0 L705.0 245.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M45.0 413.0 L45.0 525.0 L705.0 525.0 L705.0 413.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="#99dd99" d="M720.0 119.0 Q725.0 119.0 725.0 126.0 L725.0 203.0 L25.0 203.0 L25.0 126.0 Q25.0 119.0 30.0 119.0 L720.0 119.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M65.0 273.0 L65.0 343.0 L345.0 343.0 L345.0 273.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M65.0 441.0 L65.0 511.0 L345.0 511.0 L345.0 441.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M405.0 441.0 L685.0 441.0 L685.0 511.0 L405.0 511.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M405.0 273.0 L405.0 343.0 L685.0 343.0 L685.0 273.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M85.0 301.0 L85.0 329.0 L325.0 329.0 L325.0 301.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M325.0 469.0 L325.0 497.0 L85.0 497.0 L85.0 469.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M425.0 497.0 L665.0 497.0 L665.0 469.0 L425.0 469.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M425.0 301.0 L425.0 329.0 L665.0 329.0 L665.0 301.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M225.0 63.0 L375.0 63.0 L375.0 35.0 L225.0 35.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M45.0 161.0 L45.0 189.0 L155.0 189.0 L155.0 161.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M215.0 161.0 L215.0 189.0 L325.0 189.0 L325.0 161.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M125.0 301.0 L125.0 329.0 L85.0 329.0 L85.0 301.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M165.0 301.0 L165.0 329.0 L125.0 329.0 L125.0 301.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M205.0 301.0 L205.0 329.0 L165.0 329.0 L165.0 301.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M205.0 301.0 L205.0 329.0 L245.0 329.0 L245.0 301.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M285.0 301.0 L285.0 329.0 L245.0 329.0 L245.0 301.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M325.0 301.0 L325.0 329.0 L285.0 329.0 L285.0 301.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M85.0 469.0 L85.0 497.0 L125.0 497.0 L125.0 469.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M165.0 469.0 L165.0 497.0 L125.0 497.0 L125.0 469.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M165.0 469.0 L165.0 497.0 L205.0 497.0 L205.0 469.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M205.0 469.0 L205.0 497.0 L245.0 497.0 L245.0 469.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M245.0 469.0 L245.0 497.0 L285.0 497.0 L285.0 469.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M325.0 469.0 L325.0 497.0 L285.0 497.0 L285.0 469.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M425.0 497.0 L465.0 497.0 L465.0 469.0 L425.0 469.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M465.0 469.0 L465.0 497.0 L505.0 497.0 L505.0 469.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M505.0 497.0 L545.0 497.0 L545.0 469.0 L505.0 469.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M545.0 497.0 L585.0 497.0 L585.0 469.0 L545.0 469.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M585.0 497.0 L625.0 497.0 L625.0 469.0 L585.0 469.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M625.0 469.0 L625.0 497.0 L665.0 497.0 L665.0 469.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M425.0 301.0 L425.0 329.0 L465.0 329.0 L465.0 301.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M465.0 301.0 L465.0 329.0 L505.0 329.0 L505.0 301.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M505.0 301.0 L505.0 329.0 L545.0 329.0 L545.0 301.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M545.0 329.0 L585.0 329.0 L585.0 301.0 L545.0 301.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M585.0 301.0 L585.0 329.0 L625.0 329.0 L625.0 301.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M625.0 301.0 L625.0 329.0 L665.0 329.0 L665.0 301.0 z"/>
+    <path stroke="none" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="#000000" d="M305.0 70.0 L300.0 84.0 L310.0 84.0 z"/>
+    <path stroke="none" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="#000000" d="M300.0 98.0 L305.0 112.0 L310.0 98.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M305.0 77.0 L305.0 105.0 "/>
+    <text x="72" y="110" font-family="Courier" font-size="13" stroke="none" fill="#000000">Kafka cluster</text>
+    <text x="108" y="152" font-family="Courier" font-size="13" stroke="none" fill="#000000">Physical system made up of multiple machines</text>
+    <text x="73" y="180" font-family="Courier" font-size="13" stroke="none" fill="#000000">Broker 1</text>
+    <text x="67" y="236" font-family="Courier" font-size="13" stroke="none" fill="#ffffff">Distributed Logs</text>
+    <text x="90" y="264" font-family="Courier" font-size="13" stroke="none" fill="#000000">Topic &quot;topic_name_A&quot;</text>
+    <text x="225" y="320" font-family="Courier" font-size="13" stroke="none" fill="#000000">3 </text>
+    <text x="101" y="292" font-family="Courier" font-size="13" stroke="none" fill="#000000">Partition 0</text>
+    <text x="185" y="320" font-family="Courier" font-size="13" stroke="none" fill="#000000">2 </text>
+    <text x="369" y="460" font-family="Courier" font-size="13" stroke="none" fill="#000000">...</text>
+    <text x="91" y="432" font-family="Courier" font-size="13" stroke="none" fill="#000000">Topic &quot;topic_name_Z&quot;</text>
+    <text x="304" y="320" font-family="Courier" font-size="13" stroke="none" fill="#000000">n </text>
+    <text x="440" y="460" font-family="Courier" font-size="13" stroke="none" fill="#000000">Partition n</text>
+    <text x="267" y="320" font-family="Courier" font-size="13" stroke="none" fill="#000000">. </text>
+    <text x="445" y="488" font-family="Courier" font-size="13" stroke="none" fill="#000000">0 </text>
+    <text x="242" y="180" font-family="Courier" font-size="13" stroke="none" fill="#000000">Broker n</text>
+    <text x="485" y="488" font-family="Courier" font-size="13" stroke="none" fill="#000000">1 </text>
+    <text x="525" y="488" font-family="Courier" font-size="13" stroke="none" fill="#000000">2 </text>
+    <text x="260" y="54" font-family="Courier" font-size="13" stroke="none" fill="#000000">Applications</text>
+    <text x="145" y="320" font-family="Courier" font-size="13" stroke="none" fill="#000000">1 </text>
+    <text x="565" y="488" font-family="Courier" font-size="13" stroke="none" fill="#000000">3 </text>
+    <text x="105" y="320" font-family="Courier" font-size="13" stroke="none" fill="#000000">0 </text>
+    <text x="179" y="180" font-family="Courier" font-size="13" stroke="none" fill="#000000">...</text>
+    <text x="607" y="488" font-family="Courier" font-size="13" stroke="none" fill="#000000">. </text>
+    <text x="356" y="96" font-family="Courier" font-size="13" stroke="none" fill="#000000">Communicate using Kafka API</text>
+    <text x="440" y="292" font-family="Courier" font-size="13" stroke="none" fill="#000000">Partition n</text>
+    <text x="525" y="320" font-family="Courier" font-size="13" stroke="none" fill="#000000">2 </text>
+    <text x="485" y="320" font-family="Courier" font-size="13" stroke="none" fill="#000000">1 </text>
+    <text x="101" y="460" font-family="Courier" font-size="13" stroke="none" fill="#000000">Partition 0</text>
+    <text x="105" y="488" font-family="Courier" font-size="13" stroke="none" fill="#000000">0 </text>
+    <text x="607" y="320" font-family="Courier" font-size="13" stroke="none" fill="#000000">. </text>
+    <text x="145" y="488" font-family="Courier" font-size="13" stroke="none" fill="#000000">1 </text>
+    <text x="565" y="320" font-family="Courier" font-size="13" stroke="none" fill="#000000">3 </text>
+    <text x="369" y="292" font-family="Courier" font-size="13" stroke="none" fill="#000000">...</text>
+    <text x="185" y="488" font-family="Courier" font-size="13" stroke="none" fill="#000000">2 </text>
+    <text x="225" y="488" font-family="Courier" font-size="13" stroke="none" fill="#000000">3 </text>
+    <text x="267" y="488" font-family="Courier" font-size="13" stroke="none" fill="#000000">. </text>
+    <text x="370" y="376" font-family="Courier" font-size="13" stroke="none" fill="#ffffff">. </text>
+    <text x="370" y="390" font-family="Courier" font-size="13" stroke="none" fill="#ffffff">. </text>
+    <text x="370" y="404" font-family="Courier" font-size="13" stroke="none" fill="#ffffff">. </text>
+    <text x="445" y="320" font-family="Courier" font-size="13" stroke="none" fill="#000000">0 </text>
+    <text x="304" y="488" font-family="Courier" font-size="13" stroke="none" fill="#000000">n </text>
+    <text x="644" y="320" font-family="Courier" font-size="13" stroke="none" fill="#000000">n </text>
+    <text x="644" y="488" font-family="Courier" font-size="13" stroke="none" fill="#000000">n </text>
+  </g>
+</svg></p><p><strong>Figure 1. Kafka System Diagram</strong></p>
+<h2 class="mume-header" id="client-operations">Client Operations</h2>
+
+<h3 class="mume-header" id="producer">Producer</h3>
+
+<p>The applications that write messages to Kafka topics are known as the producers. The topics are persistent logs and Kafka allows the write operations to only append the log as shown in the following diagram.</p>
+<p code_chunk_offset="1" cmd="true" args="[&quot;-E&quot;]"><!--?xml version='1.0' encoding='UTF-8' standalone='no'?-->
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="280" shape-rendering="geometricPrecision" version="1.0">
+  <defs>
+    <filter id="f2" x="0" y="0" width="200%" height="200%">
+      <feOffset result="offOut" in="SourceGraphic" dx="5" dy="5"/>
+      <feGaussianBlur result="blurOut" in="offOut" stdDeviation="3"/>
+      <feBlend in="SourceGraphic" in2="blurOut" mode="normal"/>
+    </filter>
+  </defs>
+  <g stroke-width="1" stroke-linecap="square" stroke-linejoin="round">
+    <rect x="0" y="0" width="940" height="280" style="fill: #ffffff"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M165.0 245.0 L205.0 245.0 L205.0 217.0 L165.0 217.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M205.0 245.0 L245.0 245.0 L245.0 217.0 L205.0 217.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M285.0 217.0 L245.0 217.0 L245.0 245.0 L285.0 245.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M285.0 217.0 L285.0 245.0 L325.0 245.0 L325.0 217.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M325.0 245.0 L365.0 245.0 L365.0 217.0 L325.0 217.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M365.0 245.0 L405.0 245.0 L405.0 217.0 L365.0 217.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M445.0 217.0 L405.0 217.0 L405.0 245.0 L445.0 245.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M445.0 217.0 L445.0 245.0 L485.0 245.0 L485.0 217.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M485.0 245.0 L525.0 245.0 L525.0 217.0 L485.0 217.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M525.0 245.0 L565.0 245.0 L565.0 217.0 L525.0 217.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M605.0 217.0 L565.0 217.0 L565.0 245.0 L605.0 245.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M165.0 161.0 L165.0 189.0 L205.0 189.0 L205.0 161.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M245.0 161.0 L245.0 189.0 L205.0 189.0 L205.0 161.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M245.0 161.0 L245.0 189.0 L285.0 189.0 L285.0 161.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M285.0 189.0 L325.0 189.0 L325.0 161.0 L285.0 161.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M325.0 161.0 L325.0 189.0 L365.0 189.0 L365.0 161.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M405.0 161.0 L405.0 189.0 L365.0 189.0 L365.0 161.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M405.0 161.0 L405.0 189.0 L445.0 189.0 L445.0 161.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M445.0 189.0 L485.0 189.0 L485.0 161.0 L445.0 161.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M205.0 105.0 L165.0 105.0 L165.0 133.0 L205.0 133.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M205.0 105.0 L205.0 133.0 L245.0 133.0 L245.0 105.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M245.0 133.0 L285.0 133.0 L285.0 105.0 L245.0 105.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M285.0 133.0 L325.0 133.0 L325.0 105.0 L285.0 105.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M365.0 105.0 L325.0 105.0 L325.0 133.0 L365.0 133.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M365.0 105.0 L365.0 133.0 L405.0 133.0 L405.0 105.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M405.0 133.0 L445.0 133.0 L445.0 105.0 L405.0 105.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M445.0 133.0 L485.0 133.0 L485.0 105.0 L445.0 105.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M525.0 105.0 L485.0 105.0 L485.0 133.0 L525.0 133.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M525.0 105.0 L525.0 133.0 L565.0 133.0 L565.0 105.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M165.0 49.0 L165.0 77.0 L205.0 77.0 L205.0 49.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M205.0 77.0 L245.0 77.0 L245.0 49.0 L205.0 49.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M245.0 49.0 L245.0 77.0 L285.0 77.0 L285.0 49.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M325.0 49.0 L325.0 77.0 L285.0 77.0 L285.0 49.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M325.0 49.0 L325.0 77.0 L365.0 77.0 L365.0 49.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M365.0 77.0 L405.0 77.0 L405.0 49.0 L365.0 49.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M405.0 49.0 L405.0 77.0 L445.0 77.0 L445.0 49.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M485.0 49.0 L485.0 77.0 L445.0 77.0 L445.0 49.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M485.0 49.0 L485.0 77.0 L525.0 77.0 L525.0 49.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M525.0 77.0 L565.0 77.0 L565.0 49.0 L525.0 49.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M565.0 49.0 L565.0 77.0 L605.0 77.0 L605.0 49.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M645.0 49.0 L645.0 77.0 L605.0 77.0 L605.0 49.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M645.0 49.0 L645.0 77.0 L685.0 77.0 L685.0 49.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M795.0 175.0 L795.0 231.0 L655.0 231.0 "/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-dasharray="5.000000,5.000000" stroke-miterlimit="0" stroke-linecap="butt" stroke-linejoin="round" fill="white" d="M685.0 77.0 L735.0 77.0 L735.0 49.0 L685.0 49.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M795.0 119.0 L795.0 63.0 L745.0 63.0 "/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M165.0 245.0 L205.0 245.0 L205.0 217.0 L165.0 217.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M205.0 245.0 L245.0 245.0 L245.0 217.0 L205.0 217.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M285.0 217.0 L245.0 217.0 L245.0 245.0 L285.0 245.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M285.0 217.0 L285.0 245.0 L325.0 245.0 L325.0 217.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M325.0 245.0 L365.0 245.0 L365.0 217.0 L325.0 217.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M365.0 245.0 L405.0 245.0 L405.0 217.0 L365.0 217.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M445.0 217.0 L405.0 217.0 L405.0 245.0 L445.0 245.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M445.0 217.0 L445.0 245.0 L485.0 245.0 L485.0 217.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M485.0 245.0 L525.0 245.0 L525.0 217.0 L485.0 217.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M525.0 245.0 L565.0 245.0 L565.0 217.0 L525.0 217.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M605.0 217.0 L565.0 217.0 L565.0 245.0 L605.0 245.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-dasharray="5.000000,5.000000" stroke-miterlimit="0" stroke-linecap="butt" stroke-linejoin="round" fill="white" d="M605.0 217.0 L605.0 245.0 L645.0 245.0 L645.0 217.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M165.0 161.0 L165.0 189.0 L205.0 189.0 L205.0 161.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M245.0 161.0 L245.0 189.0 L205.0 189.0 L205.0 161.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M245.0 161.0 L245.0 189.0 L285.0 189.0 L285.0 161.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M285.0 189.0 L325.0 189.0 L325.0 161.0 L285.0 161.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M325.0 161.0 L325.0 189.0 L365.0 189.0 L365.0 161.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M405.0 161.0 L405.0 189.0 L365.0 189.0 L365.0 161.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M405.0 161.0 L405.0 189.0 L445.0 189.0 L445.0 161.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M445.0 189.0 L485.0 189.0 L485.0 161.0 L445.0 161.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-dasharray="5.000000,5.000000" stroke-miterlimit="0" stroke-linecap="butt" stroke-linejoin="round" fill="white" d="M485.0 161.0 L485.0 189.0 L525.0 189.0 L525.0 161.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M205.0 105.0 L165.0 105.0 L165.0 133.0 L205.0 133.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M205.0 105.0 L205.0 133.0 L245.0 133.0 L245.0 105.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M245.0 133.0 L285.0 133.0 L285.0 105.0 L245.0 105.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M285.0 133.0 L325.0 133.0 L325.0 105.0 L285.0 105.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M365.0 105.0 L325.0 105.0 L325.0 133.0 L365.0 133.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M365.0 105.0 L365.0 133.0 L405.0 133.0 L405.0 105.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M405.0 133.0 L445.0 133.0 L445.0 105.0 L405.0 105.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M445.0 133.0 L485.0 133.0 L485.0 105.0 L445.0 105.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M525.0 105.0 L485.0 105.0 L485.0 133.0 L525.0 133.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M525.0 105.0 L525.0 133.0 L565.0 133.0 L565.0 105.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-dasharray="5.000000,5.000000" stroke-miterlimit="0" stroke-linecap="butt" stroke-linejoin="round" fill="white" d="M565.0 133.0 L605.0 133.0 L605.0 105.0 L565.0 105.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M165.0 49.0 L165.0 77.0 L205.0 77.0 L205.0 49.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M205.0 77.0 L245.0 77.0 L245.0 49.0 L205.0 49.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M245.0 49.0 L245.0 77.0 L285.0 77.0 L285.0 49.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M325.0 49.0 L325.0 77.0 L285.0 77.0 L285.0 49.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M325.0 49.0 L325.0 77.0 L365.0 77.0 L365.0 49.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M365.0 77.0 L405.0 77.0 L405.0 49.0 L365.0 49.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M405.0 49.0 L405.0 77.0 L445.0 77.0 L445.0 49.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M485.0 49.0 L485.0 77.0 L445.0 77.0 L445.0 49.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M485.0 49.0 L485.0 77.0 L525.0 77.0 L525.0 49.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M525.0 77.0 L565.0 77.0 L565.0 49.0 L525.0 49.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M565.0 49.0 L565.0 77.0 L605.0 77.0 L605.0 49.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M645.0 49.0 L645.0 77.0 L605.0 77.0 L605.0 49.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M645.0 49.0 L645.0 77.0 L685.0 77.0 L685.0 49.0 z"/>
+    <path stroke="none" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="#000000" d="M750.0 56.0 L740.0 63.0 L750.0 70.0 z"/>
+    <path stroke="none" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="#000000" d="M620.0 112.0 L610.0 119.0 L620.0 126.0 z"/>
+    <path stroke="none" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="#000000" d="M540.0 168.0 L530.0 175.0 L540.0 182.0 z"/>
+    <path stroke="none" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="#000000" d="M660.0 224.0 L650.0 231.0 L660.0 238.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M795.0 175.0 L535.0 175.0 "/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M795.0 147.0 L795.0 175.0 "/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M795.0 147.0 L805.0 147.0 "/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M795.0 119.0 L795.0 147.0 "/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M615.0 119.0 L795.0 119.0 "/>
+    <text x="41" y="68" font-family="Courier" font-size="13" stroke="none" fill="#000000">Partition 0</text>
+    <text x="41" y="124" font-family="Courier" font-size="13" stroke="none" fill="#000000">Partition 1</text>
+    <text x="41" y="180" font-family="Courier" font-size="13" stroke="none" fill="#000000">Partition 2</text>
+    <text x="185" y="236" font-family="Courier" font-size="13" stroke="none" fill="#000000">0 </text>
+    <text x="225" y="236" font-family="Courier" font-size="13" stroke="none" fill="#000000">1 </text>
+    <text x="265" y="236" font-family="Courier" font-size="13" stroke="none" fill="#000000">2 </text>
+    <text x="305" y="236" font-family="Courier" font-size="13" stroke="none" fill="#000000">3 </text>
+    <text x="187" y="40" font-family="Courier" font-size="13" stroke="none" fill="#000000">Topic &quot;topic_name&quot;</text>
+    <text x="225" y="68" font-family="Courier" font-size="13" stroke="none" fill="#000000">1 </text>
+    <text x="265" y="124" font-family="Courier" font-size="13" stroke="none" fill="#000000">2 </text>
+    <text x="305" y="180" font-family="Courier" font-size="13" stroke="none" fill="#000000">3 </text>
+    <text x="41" y="236" font-family="Courier" font-size="13" stroke="none" fill="#000000">Partition 3</text>
+    <text x="185" y="68" font-family="Courier" font-size="13" stroke="none" fill="#000000">0 </text>
+    <text x="305" y="124" font-family="Courier" font-size="13" stroke="none" fill="#000000">3 </text>
+    <text x="265" y="180" font-family="Courier" font-size="13" stroke="none" fill="#000000">2 </text>
+    <text x="305" y="68" font-family="Courier" font-size="13" stroke="none" fill="#000000">3 </text>
+    <text x="185" y="124" font-family="Courier" font-size="13" stroke="none" fill="#000000">0 </text>
+    <text x="225" y="180" font-family="Courier" font-size="13" stroke="none" fill="#000000">1 </text>
+    <text x="265" y="68" font-family="Courier" font-size="13" stroke="none" fill="#000000">2 </text>
+    <text x="225" y="124" font-family="Courier" font-size="13" stroke="none" fill="#000000">1 </text>
+    <text x="185" y="180" font-family="Courier" font-size="13" stroke="none" fill="#000000">0 </text>
+    <text x="385" y="68" font-family="Courier" font-size="13" stroke="none" fill="#000000">5 </text>
+    <text x="425" y="124" font-family="Courier" font-size="13" stroke="none" fill="#000000">6 </text>
+    <text x="465" y="180" font-family="Courier" font-size="13" stroke="none" fill="#000000">7 </text>
+    <text x="505" y="236" font-family="Courier" font-size="13" stroke="none" fill="#000000">8 </text>
+    <text x="345" y="68" font-family="Courier" font-size="13" stroke="none" fill="#000000">4 </text>
+    <text x="465" y="124" font-family="Courier" font-size="13" stroke="none" fill="#000000">7 </text>
+    <text x="425" y="180" font-family="Courier" font-size="13" stroke="none" fill="#000000">6 </text>
+    <text x="545" y="236" font-family="Courier" font-size="13" stroke="none" fill="#000000">9 </text>
+    <text x="573" y="236" font-family="Courier" font-size="13" stroke="none" fill="#000000">10</text>
+    <text x="465" y="68" font-family="Courier" font-size="13" stroke="none" fill="#000000">7 </text>
+    <text x="345" y="124" font-family="Courier" font-size="13" stroke="none" fill="#000000">4 </text>
+    <text x="385" y="180" font-family="Courier" font-size="13" stroke="none" fill="#000000">5 </text>
+    <text x="613" y="236" font-family="Courier" font-size="13" stroke="none" fill="#000000">11</text>
+    <text x="425" y="68" font-family="Courier" font-size="13" stroke="none" fill="#000000">6 </text>
+    <text x="385" y="124" font-family="Courier" font-size="13" stroke="none" fill="#000000">5 </text>
+    <text x="345" y="180" font-family="Courier" font-size="13" stroke="none" fill="#000000">4 </text>
+    <text x="573" y="124" font-family="Courier" font-size="13" stroke="none" fill="#000000">10</text>
+    <text x="545" y="68" font-family="Courier" font-size="13" stroke="none" fill="#000000">9 </text>
+    <text x="345" y="236" font-family="Courier" font-size="13" stroke="none" fill="#000000">4 </text>
+    <text x="505" y="68" font-family="Courier" font-size="13" stroke="none" fill="#000000">8 </text>
+    <text x="385" y="236" font-family="Courier" font-size="13" stroke="none" fill="#000000">5 </text>
+    <text x="613" y="68" font-family="Courier" font-size="13" stroke="none" fill="#000000">11</text>
+    <text x="505" y="124" font-family="Courier" font-size="13" stroke="none" fill="#000000">8 </text>
+    <text x="425" y="236" font-family="Courier" font-size="13" stroke="none" fill="#000000">6 </text>
+    <text x="573" y="68" font-family="Courier" font-size="13" stroke="none" fill="#000000">10</text>
+    <text x="545" y="124" font-family="Courier" font-size="13" stroke="none" fill="#000000">9 </text>
+    <text x="505" y="180" font-family="Courier" font-size="13" stroke="none" fill="#000000">8 </text>
+    <text x="465" y="236" font-family="Courier" font-size="13" stroke="none" fill="#000000">7 </text>
+    <text x="703" y="68" font-family="Courier" font-size="13" stroke="none" fill="#000000">13</text>
+    <text x="653" y="68" font-family="Courier" font-size="13" stroke="none" fill="#000000">12</text>
+    <text x="810" y="138" font-family="Courier" font-size="13" stroke="none" fill="#000000">Writes are</text>
+    <text x="810" y="152" font-family="Courier" font-size="13" stroke="none" fill="#000000">append only</text>
+  </g>
+</svg></p><p><strong>Figure 2. Kafka Producer</strong></p>
+<h3 class="mume-header" id="consumer">Consumer</h3>
+
+<p>The applications that read messages from the Kafka topics are known as consumers. Kafka maintains the last read<br>
+locations of the consumers and lets them read the next messages sequentially.</p>
+<p code_chunk_offset="2" cmd="true" args="[&quot;-E&quot;]"><!--?xml version='1.0' encoding='UTF-8' standalone='no'?-->
+<svg xmlns="http://www.w3.org/2000/svg" width="990" height="392" shape-rendering="geometricPrecision" version="1.0">
+  <defs>
+    <filter id="f2" x="0" y="0" width="200%" height="200%">
+      <feOffset result="offOut" in="SourceGraphic" dx="5" dy="5"/>
+      <feGaussianBlur result="blurOut" in="offOut" stdDeviation="3"/>
+      <feBlend in="SourceGraphic" in2="blurOut" mode="normal"/>
+    </filter>
+  </defs>
+  <g stroke-width="1" stroke-linecap="square" stroke-linejoin="round">
+    <rect x="0" y="0" width="990" height="392" style="fill: #ffffff"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M795.0 84.0 Q795.0 77.0 800.0 77.0 L940.0 77.0 Q945.0 77.0 945.0 84.0 L945.0 308.0 L945.0 308.0 Q945.0 315.0 940.0 315.0 L800.0 315.0 L800.0 315.0 Q795.0 315.0 795.0 308.0 L795.0 84.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M815.0 273.0 L815.0 301.0 L925.0 301.0 L925.0 273.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M925.0 189.0 L925.0 217.0 L815.0 217.0 L815.0 189.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M815.0 105.0 L815.0 133.0 L925.0 133.0 L925.0 105.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M165.0 245.0 L165.0 273.0 L205.0 273.0 L205.0 245.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M205.0 245.0 L205.0 273.0 L245.0 273.0 L245.0 245.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M245.0 245.0 L245.0 273.0 L285.0 273.0 L285.0 245.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M325.0 245.0 L325.0 273.0 L285.0 273.0 L285.0 245.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M325.0 245.0 L325.0 273.0 L365.0 273.0 L365.0 245.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M365.0 245.0 L365.0 273.0 L405.0 273.0 L405.0 245.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M405.0 245.0 L405.0 273.0 L445.0 273.0 L445.0 245.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M485.0 245.0 L485.0 273.0 L445.0 273.0 L445.0 245.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M205.0 329.0 L165.0 329.0 L165.0 357.0 L205.0 357.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M205.0 329.0 L205.0 357.0 L245.0 357.0 L245.0 329.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M245.0 357.0 L285.0 357.0 L285.0 329.0 L245.0 329.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M285.0 357.0 L325.0 357.0 L325.0 329.0 L285.0 329.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M365.0 329.0 L325.0 329.0 L325.0 357.0 L365.0 357.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M365.0 329.0 L365.0 357.0 L405.0 357.0 L405.0 329.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M405.0 357.0 L445.0 357.0 L445.0 329.0 L405.0 329.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M445.0 357.0 L485.0 357.0 L485.0 329.0 L445.0 329.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M525.0 329.0 L485.0 329.0 L485.0 357.0 L525.0 357.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M525.0 329.0 L525.0 357.0 L565.0 357.0 L565.0 329.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M565.0 357.0 L605.0 357.0 L605.0 329.0 L565.0 329.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M165.0 133.0 L165.0 161.0 L205.0 161.0 L205.0 133.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M245.0 133.0 L245.0 161.0 L205.0 161.0 L205.0 133.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M245.0 133.0 L245.0 161.0 L285.0 161.0 L285.0 133.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M285.0 133.0 L285.0 161.0 L325.0 161.0 L325.0 133.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M325.0 133.0 L325.0 161.0 L365.0 161.0 L365.0 133.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M405.0 133.0 L405.0 161.0 L365.0 161.0 L365.0 133.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M405.0 133.0 L405.0 161.0 L445.0 161.0 L445.0 133.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M445.0 133.0 L445.0 161.0 L485.0 161.0 L485.0 133.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M485.0 133.0 L485.0 161.0 L525.0 161.0 L525.0 133.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M565.0 133.0 L565.0 161.0 L525.0 161.0 L525.0 133.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M165.0 49.0 L165.0 77.0 L205.0 77.0 L205.0 49.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M205.0 77.0 L245.0 77.0 L245.0 49.0 L205.0 49.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M245.0 49.0 L245.0 77.0 L285.0 77.0 L285.0 49.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M325.0 49.0 L325.0 77.0 L285.0 77.0 L285.0 49.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M325.0 49.0 L325.0 77.0 L365.0 77.0 L365.0 49.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M365.0 77.0 L405.0 77.0 L405.0 49.0 L365.0 49.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M405.0 49.0 L405.0 77.0 L445.0 77.0 L445.0 49.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M485.0 49.0 L485.0 77.0 L445.0 77.0 L445.0 49.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M485.0 49.0 L485.0 77.0 L525.0 77.0 L525.0 49.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M525.0 77.0 L565.0 77.0 L565.0 49.0 L525.0 49.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M565.0 49.0 L565.0 77.0 L605.0 77.0 L605.0 49.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M645.0 49.0 L645.0 77.0 L605.0 77.0 L605.0 49.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M645.0 49.0 L645.0 77.0 L685.0 77.0 L685.0 49.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M795.0 84.0 Q795.0 77.0 800.0 77.0 L940.0 77.0 Q945.0 77.0 945.0 84.0 L945.0 308.0 L945.0 308.0 Q945.0 315.0 940.0 315.0 L800.0 315.0 L800.0 315.0 Q795.0 315.0 795.0 308.0 L795.0 84.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M785.0 119.0 L385.0 119.0 L385.0 91.0 "/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M785.0 287.0 L545.0 287.0 L545.0 315.0 "/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M815.0 273.0 L815.0 301.0 L925.0 301.0 L925.0 273.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M925.0 189.0 L925.0 217.0 L815.0 217.0 L815.0 189.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M815.0 105.0 L815.0 133.0 L925.0 133.0 L925.0 105.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-dasharray="5.000000,5.000000" stroke-miterlimit="0" stroke-linecap="butt" stroke-linejoin="round" fill="white" d="M685.0 77.0 L735.0 77.0 L735.0 49.0 L685.0 49.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M165.0 245.0 L165.0 273.0 L205.0 273.0 L205.0 245.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M205.0 245.0 L205.0 273.0 L245.0 273.0 L245.0 245.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M245.0 245.0 L245.0 273.0 L285.0 273.0 L285.0 245.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M325.0 245.0 L325.0 273.0 L285.0 273.0 L285.0 245.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M325.0 245.0 L325.0 273.0 L365.0 273.0 L365.0 245.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M365.0 245.0 L365.0 273.0 L405.0 273.0 L405.0 245.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M405.0 245.0 L405.0 273.0 L445.0 273.0 L445.0 245.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M485.0 245.0 L485.0 273.0 L445.0 273.0 L445.0 245.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-dasharray="5.000000,5.000000" stroke-miterlimit="0" stroke-linecap="butt" stroke-linejoin="round" fill="white" d="M485.0 245.0 L485.0 273.0 L525.0 273.0 L525.0 245.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M205.0 329.0 L165.0 329.0 L165.0 357.0 L205.0 357.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M205.0 329.0 L205.0 357.0 L245.0 357.0 L245.0 329.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M245.0 357.0 L285.0 357.0 L285.0 329.0 L245.0 329.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M285.0 357.0 L325.0 357.0 L325.0 329.0 L285.0 329.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M365.0 329.0 L325.0 329.0 L325.0 357.0 L365.0 357.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M365.0 329.0 L365.0 357.0 L405.0 357.0 L405.0 329.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M405.0 357.0 L445.0 357.0 L445.0 329.0 L405.0 329.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M445.0 357.0 L485.0 357.0 L485.0 329.0 L445.0 329.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M525.0 329.0 L485.0 329.0 L485.0 357.0 L525.0 357.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M525.0 329.0 L525.0 357.0 L565.0 357.0 L565.0 329.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M565.0 357.0 L605.0 357.0 L605.0 329.0 L565.0 329.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-dasharray="5.000000,5.000000" stroke-miterlimit="0" stroke-linecap="butt" stroke-linejoin="round" fill="white" d="M605.0 357.0 L645.0 357.0 L645.0 329.0 L605.0 329.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M165.0 133.0 L165.0 161.0 L205.0 161.0 L205.0 133.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M245.0 133.0 L245.0 161.0 L205.0 161.0 L205.0 133.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M245.0 133.0 L245.0 161.0 L285.0 161.0 L285.0 133.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M285.0 133.0 L285.0 161.0 L325.0 161.0 L325.0 133.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M325.0 133.0 L325.0 161.0 L365.0 161.0 L365.0 133.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M405.0 133.0 L405.0 161.0 L365.0 161.0 L365.0 133.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M405.0 133.0 L405.0 161.0 L445.0 161.0 L445.0 133.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M445.0 133.0 L445.0 161.0 L485.0 161.0 L485.0 133.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M485.0 133.0 L485.0 161.0 L525.0 161.0 L525.0 133.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M565.0 133.0 L565.0 161.0 L525.0 161.0 L525.0 133.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-dasharray="5.000000,5.000000" stroke-miterlimit="0" stroke-linecap="butt" stroke-linejoin="round" fill="white" d="M565.0 133.0 L565.0 161.0 L605.0 161.0 L605.0 133.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M165.0 49.0 L165.0 77.0 L205.0 77.0 L205.0 49.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M205.0 77.0 L245.0 77.0 L245.0 49.0 L205.0 49.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M245.0 49.0 L245.0 77.0 L285.0 77.0 L285.0 49.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M325.0 49.0 L325.0 77.0 L285.0 77.0 L285.0 49.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M325.0 49.0 L325.0 77.0 L365.0 77.0 L365.0 49.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M365.0 77.0 L405.0 77.0 L405.0 49.0 L365.0 49.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M405.0 49.0 L405.0 77.0 L445.0 77.0 L445.0 49.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M485.0 49.0 L485.0 77.0 L445.0 77.0 L445.0 49.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M485.0 49.0 L485.0 77.0 L525.0 77.0 L525.0 49.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M525.0 77.0 L565.0 77.0 L565.0 49.0 L525.0 49.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M565.0 49.0 L565.0 77.0 L605.0 77.0 L605.0 49.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M645.0 49.0 L645.0 77.0 L605.0 77.0 L605.0 49.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M645.0 49.0 L645.0 77.0 L685.0 77.0 L685.0 49.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M425.0 203.0 L345.0 203.0 L345.0 231.0 "/>
+    <path stroke="none" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="#000000" d="M385.0 84.0 L380.0 98.0 L390.0 98.0 z"/>
+    <path stroke="none" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="#000000" d="M425.0 168.0 L420.0 182.0 L430.0 182.0 z"/>
+    <path stroke="none" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="#000000" d="M340.0 224.0 L345.0 238.0 L350.0 224.0 z"/>
+    <path stroke="none" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="#000000" d="M540.0 308.0 L545.0 322.0 L550.0 308.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M800.0 287.0 L815.0 287.0 "/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M800.0 203.0 L815.0 203.0 "/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M800.0 119.0 L815.0 119.0 "/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M425.0 203.0 L425.0 175.0 "/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M785.0 203.0 L425.0 203.0 "/>
+    <text x="41" y="68" font-family="Courier" font-size="13" stroke="none" fill="#000000">Partition 0</text>
+    <text x="41" y="152" font-family="Courier" font-size="13" stroke="none" fill="#000000">Partition 1</text>
+    <text x="185" y="264" font-family="Courier" font-size="13" stroke="none" fill="#000000">0 </text>
+    <text x="265" y="348" font-family="Courier" font-size="13" stroke="none" fill="#000000">2 </text>
+    <text x="225" y="264" font-family="Courier" font-size="13" stroke="none" fill="#000000">1 </text>
+    <text x="305" y="348" font-family="Courier" font-size="13" stroke="none" fill="#000000">3 </text>
+    <text x="265" y="264" font-family="Courier" font-size="13" stroke="none" fill="#000000">2 </text>
+    <text x="185" y="348" font-family="Courier" font-size="13" stroke="none" fill="#000000">0 </text>
+    <text x="305" y="264" font-family="Courier" font-size="13" stroke="none" fill="#000000">3 </text>
+    <text x="225" y="348" font-family="Courier" font-size="13" stroke="none" fill="#000000">1 </text>
+    <text x="187" y="40" font-family="Courier" font-size="13" stroke="none" fill="#000000">Topic &quot;topic_name&quot;</text>
+    <text x="265" y="152" font-family="Courier" font-size="13" stroke="none" fill="#000000">2 </text>
+    <text x="41" y="264" font-family="Courier" font-size="13" stroke="none" fill="#000000">Partition 2</text>
+    <text x="41" y="348" font-family="Courier" font-size="13" stroke="none" fill="#000000">Partition 3</text>
+    <text x="225" y="68" font-family="Courier" font-size="13" stroke="none" fill="#000000">1 </text>
+    <text x="305" y="152" font-family="Courier" font-size="13" stroke="none" fill="#000000">3 </text>
+    <text x="185" y="68" font-family="Courier" font-size="13" stroke="none" fill="#000000">0 </text>
+    <text x="185" y="152" font-family="Courier" font-size="13" stroke="none" fill="#000000">0 </text>
+    <text x="305" y="68" font-family="Courier" font-size="13" stroke="none" fill="#000000">3 </text>
+    <text x="225" y="152" font-family="Courier" font-size="13" stroke="none" fill="#000000">1 </text>
+    <text x="265" y="68" font-family="Courier" font-size="13" stroke="none" fill="#000000">2 </text>
+    <text x="425" y="152" font-family="Courier" font-size="13" stroke="none" fill="#000000">6 </text>
+    <text x="505" y="264" font-family="Courier" font-size="13" stroke="none" fill="#000000">8 </text>
+    <text x="573" y="348" font-family="Courier" font-size="13" stroke="none" fill="#000000">10</text>
+    <text x="385" y="68" font-family="Courier" font-size="13" stroke="none" fill="#000000">5 </text>
+    <text x="465" y="152" font-family="Courier" font-size="13" stroke="none" fill="#000000">7 </text>
+    <text x="613" y="348" font-family="Courier" font-size="13" stroke="none" fill="#000000">11</text>
+    <text x="345" y="68" font-family="Courier" font-size="13" stroke="none" fill="#000000">4 </text>
+    <text x="345" y="152" font-family="Courier" font-size="13" stroke="none" fill="#000000">4 </text>
+    <text x="465" y="68" font-family="Courier" font-size="13" stroke="none" fill="#000000">7 </text>
+    <text x="505" y="348" font-family="Courier" font-size="13" stroke="none" fill="#000000">8 </text>
+    <text x="385" y="152" font-family="Courier" font-size="13" stroke="none" fill="#000000">5 </text>
+    <text x="425" y="68" font-family="Courier" font-size="13" stroke="none" fill="#000000">6 </text>
+    <text x="545" y="348" font-family="Courier" font-size="13" stroke="none" fill="#000000">9 </text>
+    <text x="573" y="152" font-family="Courier" font-size="13" stroke="none" fill="#000000">10</text>
+    <text x="345" y="264" font-family="Courier" font-size="13" stroke="none" fill="#000000">4 </text>
+    <text x="545" y="68" font-family="Courier" font-size="13" stroke="none" fill="#000000">9 </text>
+    <text x="425" y="348" font-family="Courier" font-size="13" stroke="none" fill="#000000">6 </text>
+    <text x="385" y="264" font-family="Courier" font-size="13" stroke="none" fill="#000000">5 </text>
+    <text x="505" y="68" font-family="Courier" font-size="13" stroke="none" fill="#000000">8 </text>
+    <text x="465" y="348" font-family="Courier" font-size="13" stroke="none" fill="#000000">7 </text>
+    <text x="505" y="152" font-family="Courier" font-size="13" stroke="none" fill="#000000">8 </text>
+    <text x="425" y="264" font-family="Courier" font-size="13" stroke="none" fill="#000000">6 </text>
+    <text x="613" y="68" font-family="Courier" font-size="13" stroke="none" fill="#000000">11</text>
+    <text x="345" y="348" font-family="Courier" font-size="13" stroke="none" fill="#000000">4 </text>
+    <text x="545" y="152" font-family="Courier" font-size="13" stroke="none" fill="#000000">9 </text>
+    <text x="465" y="264" font-family="Courier" font-size="13" stroke="none" fill="#000000">7 </text>
+    <text x="573" y="68" font-family="Courier" font-size="13" stroke="none" fill="#000000">10</text>
+    <text x="385" y="348" font-family="Courier" font-size="13" stroke="none" fill="#000000">5 </text>
+    <text x="832" y="292" font-family="Courier" font-size="13" stroke="none" fill="#000000">Consumer 2</text>
+    <text x="703" y="68" font-family="Courier" font-size="13" stroke="none" fill="#000000">13</text>
+    <text x="653" y="68" font-family="Courier" font-size="13" stroke="none" fill="#000000">12</text>
+    <text x="815" y="96" font-family="Courier" font-size="13" stroke="none" fill="#000000">Consumer Group</text>
+    <text x="832" y="124" font-family="Courier" font-size="13" stroke="none" fill="#000000">Consumer 0</text>
+    <text x="832" y="208" font-family="Courier" font-size="13" stroke="none" fill="#000000">Consumer 1</text>
+  </g>
+</svg></p><p><strong>Figure 3. Kafka Consumer</strong></p>
+<h2 class="mume-header" id="messaging">Messaging</h2>
+
+<p>For Kafka message is simply an array of bytes and producers can choose to represent messages in any data type that can be serialized to byte streams. Conversely consumers can read any message that it can de-serialize to its data type. To facilitate data exchange between diverse systems and programming languages, a standard serialization and de-serialization is required that all the systems can support. PuSH uses Apache Avro serialization system supported by Confluent Kafka to stream business domain objects.</p>
+<h3 class="mume-header" id="avro">AVRO</h3>
+
+<p>Apache Avro uses schemas to map the domain structures and the serialized binary data format. While the binary format helps to efficiently exchange messages across systems, the schemas help applications to handle the messages as business domain objects.</p>
+<p>The following diagram shows this relationship between these components within the Avro serialization scheme.</p>
+<h2 class="mume-header" id="avro-serialization">Avro Serialization</h2>
+
+<p code_chunk_offset="3" cmd="true" args="[&quot;-E&quot;]"><!--?xml version='1.0' encoding='UTF-8' standalone='no'?-->
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="210" shape-rendering="geometricPrecision" version="1.0">
+  <defs>
+    <filter id="f2" x="0" y="0" width="200%" height="200%">
+      <feOffset result="offOut" in="SourceGraphic" dx="5" dy="5"/>
+      <feGaussianBlur result="blurOut" in="offOut" stdDeviation="3"/>
+      <feBlend in="SourceGraphic" in2="blurOut" mode="normal"/>
+    </filter>
+  </defs>
+  <g stroke-width="1" stroke-linecap="square" stroke-linejoin="round">
+    <rect x="0" y="0" width="640" height="210" style="fill: #ffffff"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M35.0 119.0 L145.0 119.0 L145.0 175.0 Q108.0 168.0 90.0 175.0 Q72.0 182.0 35.0 175.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M35.0 35.0 L145.0 35.0 L145.0 77.0 L35.0 77.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M215.0 77.0 L215.0 49.0 L255.0 49.0 L255.0 77.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M255.0 49.0 L255.0 77.0 L295.0 77.0 L295.0 49.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M335.0 49.0 L295.0 49.0 L295.0 77.0 L335.0 77.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M335.0 49.0 L335.0 77.0 L375.0 77.0 L375.0 49.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M375.0 77.0 L375.0 49.0 L415.0 49.0 L415.0 77.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M415.0 49.0 L415.0 77.0 L455.0 77.0 L455.0 49.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M495.0 49.0 L455.0 49.0 L455.0 77.0 L495.0 77.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M495.0 49.0 L495.0 77.0 L535.0 77.0 L535.0 49.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M535.0 77.0 L535.0 49.0 L575.0 49.0 L575.0 77.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M575.0 49.0 L575.0 77.0 L615.0 77.0 L615.0 49.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M35.0 119.0 L145.0 119.0 L145.0 175.0 Q108.0 168.0 90.0 175.0 Q72.0 182.0 35.0 175.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M35.0 35.0 L145.0 35.0 L145.0 77.0 L35.0 77.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M215.0 77.0 L215.0 49.0 L255.0 49.0 L255.0 77.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M255.0 49.0 L255.0 77.0 L295.0 77.0 L295.0 49.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M335.0 49.0 L295.0 49.0 L295.0 77.0 L335.0 77.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M335.0 49.0 L335.0 77.0 L375.0 77.0 L375.0 49.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M375.0 77.0 L375.0 49.0 L415.0 49.0 L415.0 77.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M415.0 49.0 L415.0 77.0 L455.0 77.0 L455.0 49.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M495.0 49.0 L455.0 49.0 L455.0 77.0 L495.0 77.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M495.0 49.0 L495.0 77.0 L535.0 77.0 L535.0 49.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M535.0 77.0 L535.0 49.0 L575.0 49.0 L575.0 77.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M575.0 49.0 L575.0 77.0 L615.0 77.0 L615.0 49.0 z"/>
+    <path stroke="none" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="#000000" d="M160.0 56.0 L150.0 63.0 L160.0 70.0 z"/>
+    <path stroke="none" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="#000000" d="M200.0 56.0 L210.0 63.0 L200.0 70.0 z"/>
+    <path stroke="none" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="#000000" d="M95.0 84.0 L90.0 98.0 L100.0 98.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M95.0 91.0 L95.0 111.0 "/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M155.0 63.0 L205.0 63.0 "/>
+    <text x="60" y="138" font-family="Courier" font-size="13" stroke="none" fill="#000000">Avro</text>
+    <text x="60" y="152" font-family="Courier" font-size="13" stroke="none" fill="#000000">Schema</text>
+    <text x="50" y="54" font-family="Courier" font-size="13" stroke="none" fill="#000000">Business</text>
+    <text x="50" y="68" font-family="Courier" font-size="13" stroke="none" fill="#000000">Object</text>
+    <text x="235" y="68" font-family="Courier" font-size="13" stroke="none" fill="#000000">0 </text>
+    <text x="228" y="40" font-family="Courier" font-size="13" stroke="none" fill="#000000">Binary Stream</text>
+    <text x="315" y="68" font-family="Courier" font-size="13" stroke="none" fill="#000000">0 </text>
+    <text x="275" y="68" font-family="Courier" font-size="13" stroke="none" fill="#000000">1 </text>
+    <text x="395" y="68" font-family="Courier" font-size="13" stroke="none" fill="#000000">0 </text>
+    <text x="355" y="68" font-family="Courier" font-size="13" stroke="none" fill="#000000">0 </text>
+    <text x="475" y="68" font-family="Courier" font-size="13" stroke="none" fill="#000000">1 </text>
+    <text x="435" y="68" font-family="Courier" font-size="13" stroke="none" fill="#000000">0 </text>
+    <text x="557" y="68" font-family="Courier" font-size="13" stroke="none" fill="#000000">. </text>
+    <text x="515" y="68" font-family="Courier" font-size="13" stroke="none" fill="#000000">0 </text>
+    <text x="597" y="68" font-family="Courier" font-size="13" stroke="none" fill="#000000">. </text>
+  </g>
+</svg></p><p code_chunk_offset="4" cmd="true" args="[&quot;-E&quot;]"><!--?xml version='1.0' encoding='UTF-8' standalone='no'?-->
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="336" shape-rendering="geometricPrecision" version="1.0">
+  <defs>
+    <filter id="f2" x="0" y="0" width="200%" height="200%">
+      <feOffset result="offOut" in="SourceGraphic" dx="5" dy="5"/>
+      <feGaussianBlur result="blurOut" in="offOut" stdDeviation="3"/>
+      <feBlend in="SourceGraphic" in2="blurOut" mode="normal"/>
+    </filter>
+  </defs>
+  <g stroke-width="1" stroke-linecap="square" stroke-linejoin="round">
+    <rect x="0" y="0" width="850" height="336" style="fill: #ffffff"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M225.0 175.0 C246.0 182.0 334.0 182.0 355.0 175.0 C334.0 168.0 246.0 168.0 225.0 175.0 M225.0 175.0 L225.0 301.0 C246.0 311.0 334.0 311.0 355.0 301.0 L355.0 175.0 "/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M225.0 91.0 L225.0 133.0 L345.0 133.0 L345.0 91.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M245.0 231.0 L335.0 231.0 L335.0 287.0 Q305.0 280.0 290.0 287.0 Q275.0 294.0 245.0 287.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M155.0 91.0 L155.0 133.0 L45.0 133.0 L45.0 91.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M25.0 35.0 L25.0 63.0 L175.0 63.0 L175.0 35.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M415.0 119.0 L455.0 119.0 L455.0 91.0 L415.0 91.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M455.0 119.0 L495.0 119.0 L495.0 91.0 L455.0 91.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M535.0 91.0 L535.0 119.0 L495.0 119.0 L495.0 91.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M575.0 91.0 L575.0 119.0 L535.0 119.0 L535.0 91.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M575.0 119.0 L615.0 119.0 L615.0 91.0 L575.0 91.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M615.0 119.0 L655.0 119.0 L655.0 91.0 L615.0 91.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M695.0 91.0 L695.0 119.0 L655.0 119.0 L655.0 91.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M735.0 91.0 L735.0 119.0 L695.0 119.0 L695.0 91.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M735.0 119.0 L775.0 119.0 L775.0 91.0 L735.0 91.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M775.0 119.0 L815.0 119.0 L815.0 91.0 L775.0 91.0 z"/>
+    <path stroke="white" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="#ffffff" d="M225.0 175.0 C246.0 182.0 334.0 182.0 355.0 175.0 C334.0 168.0 246.0 168.0 225.0 175.0 M225.0 175.0 L225.0 301.0 C246.0 311.0 334.0 311.0 355.0 301.0 L355.0 175.0 "/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M225.0 175.0 C246.0 182.0 334.0 182.0 355.0 175.0 C334.0 168.0 246.0 168.0 225.0 175.0 M225.0 175.0 L225.0 301.0 C246.0 311.0 334.0 311.0 355.0 301.0 L355.0 175.0 "/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M225.0 91.0 L225.0 133.0 L345.0 133.0 L345.0 91.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M245.0 231.0 L335.0 231.0 L335.0 287.0 Q305.0 280.0 290.0 287.0 Q275.0 294.0 245.0 287.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M155.0 91.0 L155.0 133.0 L45.0 133.0 L45.0 91.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M25.0 35.0 L25.0 63.0 L175.0 63.0 L175.0 35.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M415.0 119.0 L455.0 119.0 L455.0 91.0 L415.0 91.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M455.0 119.0 L495.0 119.0 L495.0 91.0 L455.0 91.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M535.0 91.0 L535.0 119.0 L495.0 119.0 L495.0 91.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M575.0 91.0 L575.0 119.0 L535.0 119.0 L535.0 91.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M575.0 119.0 L615.0 119.0 L615.0 91.0 L575.0 91.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M615.0 119.0 L655.0 119.0 L655.0 91.0 L615.0 91.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M695.0 91.0 L695.0 119.0 L655.0 119.0 L655.0 91.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M735.0 91.0 L735.0 119.0 L695.0 119.0 L695.0 91.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M735.0 119.0 L775.0 119.0 L775.0 91.0 L735.0 91.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M775.0 119.0 L815.0 119.0 L815.0 91.0 L775.0 91.0 z"/>
+    <path stroke="none" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="#000000" d="M170.0 98.0 L160.0 105.0 L170.0 112.0 z"/>
+    <path stroke="none" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="#000000" d="M210.0 98.0 L220.0 105.0 L210.0 112.0 z"/>
+    <path stroke="none" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="#000000" d="M360.0 98.0 L350.0 105.0 L360.0 112.0 z"/>
+    <path stroke="none" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="#000000" d="M400.0 98.0 L410.0 105.0 L400.0 112.0 z"/>
+    <path stroke="none" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="#000000" d="M285.0 140.0 L280.0 154.0 L290.0 154.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M95.0 70.0 L95.0 83.0 "/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M285.0 147.0 L285.0 167.0 "/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M215.0 105.0 L165.0 105.0 "/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M405.0 105.0 L355.0 105.0 "/>
+    <text x="60" y="110" font-family="Courier" font-size="13" stroke="none" fill="#000000">Business</text>
+    <text x="60" y="124" font-family="Courier" font-size="13" stroke="none" fill="#000000">Objects</text>
+    <text x="60" y="54" font-family="Courier" font-size="13" stroke="none" fill="#000000">Applications</text>
+    <text x="260" y="250" font-family="Courier" font-size="13" stroke="none" fill="#000000">Avro</text>
+    <text x="260" y="264" font-family="Courier" font-size="13" stroke="none" fill="#000000">Schemas</text>
+    <text x="240" y="110" font-family="Courier" font-size="13" stroke="none" fill="#000000">Confluent</text>
+    <text x="240" y="124" font-family="Courier" font-size="13" stroke="none" fill="#000000">Kafka</text>
+    <text x="240" y="194" font-family="Courier" font-size="13" stroke="none" fill="#000000">Schema</text>
+    <text x="240" y="208" font-family="Courier" font-size="13" stroke="none" fill="#000000">Registry</text>
+    <text x="428" y="82" font-family="Courier" font-size="13" stroke="none" fill="#000000">Binary Stream</text>
+    <text x="475" y="110" font-family="Courier" font-size="13" stroke="none" fill="#000000">1 </text>
+    <text x="435" y="110" font-family="Courier" font-size="13" stroke="none" fill="#000000">0 </text>
+    <text x="555" y="110" font-family="Courier" font-size="13" stroke="none" fill="#000000">0 </text>
+    <text x="515" y="110" font-family="Courier" font-size="13" stroke="none" fill="#000000">0 </text>
+    <text x="635" y="110" font-family="Courier" font-size="13" stroke="none" fill="#000000">0 </text>
+    <text x="595" y="110" font-family="Courier" font-size="13" stroke="none" fill="#000000">0 </text>
+    <text x="715" y="110" font-family="Courier" font-size="13" stroke="none" fill="#000000">0 </text>
+    <text x="675" y="110" font-family="Courier" font-size="13" stroke="none" fill="#000000">1 </text>
+    <text x="797" y="110" font-family="Courier" font-size="13" stroke="none" fill="#000000">. </text>
+    <text x="757" y="110" font-family="Courier" font-size="13" stroke="none" fill="#000000">. </text>
+  </g>
+</svg></p><h3 class="mume-header" id="application-development">Application Development</h3>
+
+<h4 class="mume-header" id="admin">Admin</h4>
+
+<ul>
+<li>kafka-consumer-groups</li>
+</ul>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">docker-compose <span class="token builtin class-name">exec</span> kafka1 kafka-consumer-groups <span class="token punctuation">\</span>
+   --list <span class="token punctuation">\</span>
+   --bootstrap-server kafka1:9091 <span class="token punctuation">\</span>
+   --command-config /etc/kafka/secrets/client_sasl_plain.config
+</pre><ul>
+<li>kafka-topics
+<ul>
+<li>list topics</li>
+</ul>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">docker-compose <span class="token builtin class-name">exec</span> kafka1 kafka-topics <span class="token punctuation">\</span>
+  --list <span class="token punctuation">\</span>
+  --zookeeper zookeeper:2181 <span class="token punctuation">\</span>
+  --command-config /etc/kafka/secrets/client_sasl_plain.config
+
+</pre><ul>
+<li>
+<ul>
+<li>create topic</li>
+</ul>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">docker-compose <span class="token builtin class-name">exec</span> kafka1 kafka-topics <span class="token punctuation">\</span>
+      --create --if-not-exists <span class="token punctuation">\</span>
+      --zookeeper zookeeper:2181 <span class="token punctuation">\</span>
+      --partitions <span class="token number">1</span> <span class="token punctuation">\</span>
+      --replication-factor <span class="token number">2</span> <span class="token punctuation">\</span>
+      --topic TEST_TOPIC
+
+docker-compose <span class="token builtin class-name">exec</span> kafka1 kafka-topics <span class="token punctuation">\</span>
+      --create --if-not-exists <span class="token punctuation">\</span>
+      --zookeeper zookeeper:2181 <span class="token punctuation">\</span>
+      --partitions <span class="token number">2</span> <span class="token punctuation">\</span>
+      --replication-factor <span class="token number">2</span> <span class="token punctuation">\</span>
+      --config retention.ms<span class="token operator">=</span><span class="token number">2592000</span> <span class="token punctuation">\</span>
+      --topic DEMO_TOPIC
+</pre><p><strong>Note</strong> ERROR InvalidReplicationFactorException: Replication factor: 3 larger than available brokers: 2.</p>
+<ul>
+<li>
+<ul>
+<li>delete topic</li>
+</ul>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">docker-compose <span class="token builtin class-name">exec</span> kafka1 kafka-topics <span class="token punctuation">\</span>
+      --delete <span class="token punctuation">\</span>
+      --zookeeper zookeeper:2181 <span class="token punctuation">\</span>
+      --topic DEMO_TOPIC
+</pre><h4 class="mume-header" id="producer-1">Producer</h4>
+
+<ul>
+<li>kafka-console-producer</li>
+</ul>
+<pre data-role="codeBlock" data-info class="language-"><code>docker-compose exec kafka1 sh
+
+echo &quot;test 1&quot; | kafka-console-producer \
+--broker-list kafka1:9091, kafka2:9092 \
+--producer.config /etc/kafka/secrets/client_sasl_plain.config \
+--topic TEST_TOPIC
+
+</code></pre><h4 class="mume-header" id="consumer-1">Consumer</h4>
+
+<ul>
+<li>kafka-console-consumer</li>
+</ul>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">docker-compose <span class="token builtin class-name">exec</span> kafka1 kafka-console-consumer <span class="token punctuation">\</span>
+--bootstrap-server kafka1:9091, kafka2:9092 <span class="token punctuation">\</span>
+--from-beginning <span class="token punctuation">\</span>
+--consumer.config /etc/kafka/secrets/client_sasl_plain.config <span class="token punctuation">\</span>
+--topic TEST_TOPIC
+
+</pre><pre data-role="codeBlock" data-info="sh" class="language-bash">docker-compose <span class="token builtin class-name">exec</span> connect kafka-avro-console-consumer <span class="token punctuation">\</span>
+  --bootstrap-server kafka1:11091,kafka2:11092 <span class="token punctuation">\</span>
+  --consumer-property security.protocol<span class="token operator">=</span>SSL <span class="token punctuation">\</span>
+  --consumer-property ssl.truststore.location<span class="token operator">=</span>/etc/kafka/secrets/kafka.appSA.truststore.jks <span class="token punctuation">\</span>
+  --consumer-property ssl.truststore.password<span class="token operator">=</span>confluent <span class="token punctuation">\</span>
+  --consumer-property ssl.keystore.location<span class="token operator">=</span>/etc/kafka/secrets/kafka.appSA.keystore.jks <span class="token punctuation">\</span>
+  --consumer-property ssl.keystore.password<span class="token operator">=</span>confluent <span class="token punctuation">\</span>
+  --consumer-property ssl.key.password<span class="token operator">=</span>confluent <span class="token punctuation">\</span>
+  --property schema.registry.url<span class="token operator">=</span>https://schemaregistry:8085 <span class="token punctuation">\</span>
+  --property schema.registry.ssl.truststore.location<span class="token operator">=</span>/etc/kafka/secrets/kafka.appSA.truststore.jks <span class="token punctuation">\</span>
+  --property schema.registry.ssl.truststore.password<span class="token operator">=</span>confluent <span class="token punctuation">\</span>
+  --property basic.auth.credentials.source<span class="token operator">=</span>USER_INFO <span class="token punctuation">\</span>
+  --property basic.auth.user.info<span class="token operator">=</span>appSA:appSA <span class="token punctuation">\</span>
+  --group wikipedia.test <span class="token punctuation">\</span>
+  --topic wikipedia.parsed <span class="token punctuation">\</span>
+  --from-beginning <span class="token punctuation">\</span>
+  --max-messages <span class="token number">5</span>
+</pre><h4 class="mume-header" id="avro-schema">Avro Schema</h4>
+
+<ul>
+<li>Example Schema 1</li>
+</ul>
+<pre data-role="codeBlock" data-info="json" class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;record&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;WikiFeedMetric&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;namespace&quot;</span><span class="token operator">:</span> <span class="token string">&quot;io.confluent.demos.common.wiki&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;fields&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;domain&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;doc&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Associated domain&quot;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;editCount&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;long&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;doc&quot;</span><span class="token operator">:</span> <span class="token string">&quot;The count of edits for the domain&quot;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</pre><ul>
+<li>Example Message 1</li>
+</ul>
+<pre data-role="codeBlock" data-info="json" class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">&quot;domain&quot;</span><span class="token operator">:</span> <span class="token string">&quot;bn.wikipedia.org&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;editCount&quot;</span><span class="token operator">:</span> <span class="token number">31</span>
+<span class="token punctuation">}</span>
+</pre><ul>
+<li>Example Schema 2</li>
+</ul>
+<pre data-role="codeBlock" data-info="json" class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;record&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;WikiEdit&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;namespace&quot;</span><span class="token operator">:</span> <span class="token string">&quot;io.confluent.demos.common.wiki&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;fields&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;default&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;bot&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">&quot;null&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;boolean&quot;</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;default&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;comment&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">&quot;null&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;string&quot;</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;default&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;id&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">&quot;null&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;long&quot;</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;default&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;LOG_ACTION&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">&quot;null&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;string&quot;</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;default&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;LOG_ACTION_COMMENT&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">&quot;null&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;string&quot;</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;default&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;LOG_ID&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">&quot;null&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;long&quot;</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;default&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;LOG_TYPE&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">&quot;null&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;string&quot;</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;default&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;meta&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">&quot;null&quot;</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          <span class="token property">&quot;fields&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+              <span class="token property">&quot;default&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+              <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;domain&quot;</span><span class="token punctuation">,</span>
+              <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                <span class="token string">&quot;null&quot;</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;string&quot;</span>
+              <span class="token punctuation">]</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>
+              <span class="token property">&quot;default&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+              <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;dt&quot;</span><span class="token punctuation">,</span>
+              <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                <span class="token string">&quot;null&quot;</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;long&quot;</span>
+              <span class="token punctuation">]</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>
+              <span class="token property">&quot;default&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+              <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;ID&quot;</span><span class="token punctuation">,</span>
+              <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                <span class="token string">&quot;null&quot;</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;string&quot;</span>
+              <span class="token punctuation">]</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>
+              <span class="token property">&quot;default&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+              <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;REQUEST_ID&quot;</span><span class="token punctuation">,</span>
+              <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                <span class="token string">&quot;null&quot;</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;string&quot;</span>
+              <span class="token punctuation">]</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>
+              <span class="token property">&quot;default&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+              <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;STREAM&quot;</span><span class="token punctuation">,</span>
+              <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                <span class="token string">&quot;null&quot;</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;string&quot;</span>
+              <span class="token punctuation">]</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>
+              <span class="token property">&quot;default&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+              <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;uri&quot;</span><span class="token punctuation">,</span>
+              <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                <span class="token string">&quot;null&quot;</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;string&quot;</span>
+              <span class="token punctuation">]</span>
+            <span class="token punctuation">}</span>
+          <span class="token punctuation">]</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;KsqlDataSourceSchema_META&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;record&quot;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;default&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;minor&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">&quot;null&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;boolean&quot;</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;default&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;NAMESPACE&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">&quot;null&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;long&quot;</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;default&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;PARSEDCOMMENT&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">&quot;null&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;string&quot;</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;default&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;patrolled&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">&quot;null&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;boolean&quot;</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;default&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;REVISION&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">&quot;null&quot;</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          <span class="token property">&quot;fields&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+              <span class="token property">&quot;default&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+              <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;NEW&quot;</span><span class="token punctuation">,</span>
+              <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                <span class="token string">&quot;null&quot;</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;long&quot;</span>
+              <span class="token punctuation">]</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>
+              <span class="token property">&quot;default&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+              <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;OLD&quot;</span><span class="token punctuation">,</span>
+              <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                <span class="token string">&quot;null&quot;</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;long&quot;</span>
+              <span class="token punctuation">]</span>
+            <span class="token punctuation">}</span>
+          <span class="token punctuation">]</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;KsqlDataSourceSchema_REVISION&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;record&quot;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;default&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;SERVER_NAME&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">&quot;null&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;string&quot;</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;default&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;SERVER_SCRIPT_PATH&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">&quot;null&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;string&quot;</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;default&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;SERVER_URL&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">&quot;null&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;string&quot;</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;default&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;TIMESTAMP&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">&quot;null&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;long&quot;</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;default&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;TITLE&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">&quot;null&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;string&quot;</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;default&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;TYPE&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">&quot;null&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;string&quot;</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;default&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;user&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">&quot;null&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;string&quot;</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;default&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;WIKI&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">&quot;null&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;string&quot;</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+
+</pre><ul>
+<li>Example Message 2</li>
+</ul>
+<pre data-role="codeBlock" data-info="json" class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">&quot;bot&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;boolean&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;comment&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;string&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Moving from [[Category:West Timor]] to [[Category:Maps of West Timor]]&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;long&quot;</span><span class="token operator">:</span> <span class="token number">1702587869</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;length&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;properties.length&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;new&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;long&quot;</span><span class="token operator">:</span> <span class="token number">3309</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;old&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;long&quot;</span><span class="token operator">:</span> <span class="token number">3301</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;log_action&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;log_action_comment&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;log_id&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;log_type&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;meta&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;domain&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;string&quot;</span><span class="token operator">:</span> <span class="token string">&quot;commons.wikimedia.org&quot;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;dt&quot;</span><span class="token operator">:</span> <span class="token number">1623096942000</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;5e31d223-753d-49c4-a631-613b13ea6a8e&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;request_id&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;string&quot;</span><span class="token operator">:</span> <span class="token string">&quot;fa6bd694-a544-4084-9cb0-7f1f2e8bbdf4&quot;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;stream&quot;</span><span class="token operator">:</span> <span class="token string">&quot;mediawiki.recentchange&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;uri&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;string&quot;</span><span class="token operator">:</span> <span class="token string">&quot;https://commons.wikimedia.org/wiki/File:Kabupaten_Timor_Tengah_Utara_(Timor_Barat).png&quot;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;minor&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;boolean&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;namespace&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;long&quot;</span><span class="token operator">:</span> <span class="token number">6</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;parsedcomment&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;string&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Moving from &lt;a href=\&quot;/wiki/Category:West_Timor\&quot; title=\&quot;Category:West Timor\&quot;&gt;Category:West Timor&lt;/a&gt; to &lt;a href=\&quot;/wiki/Category:Maps_of_West_Timor\&quot; title=\&quot;Category:Maps of West Timor\&quot;&gt;Category:Maps of West Timor&lt;/a&gt;&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;patrolled&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;boolean&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;revision&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;properties.revision&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;new&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;long&quot;</span><span class="token operator">:</span> <span class="token number">567815638</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;old&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;long&quot;</span><span class="token operator">:</span> <span class="token number">561173559</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;server_name&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;string&quot;</span><span class="token operator">:</span> <span class="token string">&quot;commons.wikimedia.org&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;server_script_path&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;string&quot;</span><span class="token operator">:</span> <span class="token string">&quot;/w&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;server_url&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;string&quot;</span><span class="token operator">:</span> <span class="token string">&quot;https://commons.wikimedia.org&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;timestamp&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;long&quot;</span><span class="token operator">:</span> <span class="token number">1623096942</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;title&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;string&quot;</span><span class="token operator">:</span> <span class="token string">&quot;File:Kabupaten Timor Tengah Utara (Timor Barat).png&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;string&quot;</span><span class="token operator">:</span> <span class="token string">&quot;edit&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;user&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;string&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Milenioscuro&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;wiki&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;string&quot;</span><span class="token operator">:</span> <span class="token string">&quot;commonswiki&quot;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</pre><h4 class="mume-header" id="topology">Topology</h4>
+
+<p code_chunk_offset="5" cmd="true" args="[&quot;-E&quot;]"><!--?xml version='1.0' encoding='UTF-8' standalone='no'?-->
+<svg xmlns="http://www.w3.org/2000/svg" width="830" height="420" shape-rendering="geometricPrecision" version="1.0">
+  <defs>
+    <filter id="f2" x="0" y="0" width="200%" height="200%">
+      <feOffset result="offOut" in="SourceGraphic" dx="5" dy="5"/>
+      <feGaussianBlur result="blurOut" in="offOut" stdDeviation="3"/>
+      <feBlend in="SourceGraphic" in2="blurOut" mode="normal"/>
+    </filter>
+  </defs>
+  <g stroke-width="1" stroke-linecap="square" stroke-linejoin="round">
+    <rect x="0" y="0" width="830" height="420" style="fill: #ffffff"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M530.0 91.0 Q535.0 91.0 535.0 98.0 L535.0 378.0 Q535.0 385.0 530.0 385.0 L30.0 385.0 L30.0 385.0 Q25.0 385.0 25.0 378.0 L25.0 98.0 L25.0 98.0 Q25.0 91.0 30.0 91.0 L530.0 91.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M570.0 189.0 L810.0 189.0 L800.0 231.0 L560.0 231.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M185.0 133.0 L185.0 161.0 L315.0 161.0 L315.0 133.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M185.0 35.0 L185.0 63.0 L315.0 63.0 L315.0 35.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M135.0 189.0 L135.0 217.0 L175.0 217.0 L175.0 189.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M215.0 189.0 L175.0 189.0 L175.0 217.0 L215.0 217.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M255.0 189.0 L215.0 189.0 L215.0 217.0 L255.0 217.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M295.0 189.0 L255.0 189.0 L255.0 217.0 L295.0 217.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M295.0 189.0 L295.0 217.0 L335.0 217.0 L335.0 189.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M375.0 189.0 L335.0 189.0 L335.0 217.0 L375.0 217.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M415.0 189.0 L375.0 189.0 L375.0 217.0 L415.0 217.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M455.0 189.0 L415.0 189.0 L415.0 217.0 L455.0 217.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M455.0 189.0 L455.0 217.0 L495.0 217.0 L495.0 189.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M135.0 343.0 L175.0 343.0 L175.0 315.0 L135.0 315.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M215.0 315.0 L215.0 343.0 L175.0 343.0 L175.0 315.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M255.0 315.0 L255.0 343.0 L215.0 343.0 L215.0 315.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M255.0 343.0 L295.0 343.0 L295.0 315.0 L255.0 315.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M295.0 343.0 L335.0 343.0 L335.0 315.0 L295.0 315.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M375.0 315.0 L375.0 343.0 L335.0 343.0 L335.0 315.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M415.0 315.0 L415.0 343.0 L375.0 343.0 L375.0 315.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M415.0 343.0 L455.0 343.0 L455.0 315.0 L415.0 315.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M455.0 343.0 L495.0 343.0 L495.0 315.0 L455.0 315.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="#eeeeee" d="M530.0 91.0 Q535.0 91.0 535.0 98.0 L535.0 378.0 Q535.0 385.0 530.0 385.0 L30.0 385.0 L30.0 385.0 Q25.0 385.0 25.0 378.0 L25.0 98.0 L25.0 98.0 Q25.0 91.0 30.0 91.0 L530.0 91.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M95.0 329.0 L55.0 329.0 L55.0 259.0 L525.0 259.0 "/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M570.0 189.0 L810.0 189.0 L800.0 231.0 L560.0 231.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M85.0 203.0 L60.0 203.0 Q55.0 203.0 55.0 196.0 L55.0 154.0 L55.0 154.0 Q55.0 147.0 60.0 147.0 L175.0 147.0 L175.0 147.0 "/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M185.0 133.0 L185.0 161.0 L315.0 161.0 L315.0 133.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M185.0 35.0 L185.0 63.0 L315.0 63.0 L315.0 35.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M545.0 259.0 L685.0 259.0 L685.0 231.0 "/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-dasharray="5.000000,5.000000" stroke-miterlimit="0" stroke-linecap="butt" stroke-linejoin="round" fill="white" d="M135.0 189.0 L95.0 189.0 L95.0 217.0 L135.0 217.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M135.0 189.0 L135.0 217.0 L175.0 217.0 L175.0 189.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M215.0 189.0 L175.0 189.0 L175.0 217.0 L215.0 217.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M255.0 189.0 L215.0 189.0 L215.0 217.0 L255.0 217.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M295.0 189.0 L255.0 189.0 L255.0 217.0 L295.0 217.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M295.0 189.0 L295.0 217.0 L335.0 217.0 L335.0 189.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M375.0 189.0 L335.0 189.0 L335.0 217.0 L375.0 217.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M415.0 189.0 L375.0 189.0 L375.0 217.0 L415.0 217.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M455.0 189.0 L415.0 189.0 L415.0 217.0 L455.0 217.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M455.0 189.0 L455.0 217.0 L495.0 217.0 L495.0 189.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-dasharray="5.000000,5.000000" stroke-miterlimit="0" stroke-linecap="butt" stroke-linejoin="round" fill="white" d="M95.0 343.0 L135.0 343.0 L135.0 315.0 L95.0 315.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M135.0 343.0 L175.0 343.0 L175.0 315.0 L135.0 315.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M215.0 315.0 L215.0 343.0 L175.0 343.0 L175.0 315.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M255.0 315.0 L255.0 343.0 L215.0 343.0 L215.0 315.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M255.0 343.0 L295.0 343.0 L295.0 315.0 L255.0 315.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M295.0 343.0 L335.0 343.0 L335.0 315.0 L295.0 315.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M375.0 315.0 L375.0 343.0 L335.0 343.0 L335.0 315.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M415.0 315.0 L415.0 343.0 L375.0 343.0 L375.0 315.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M415.0 343.0 L455.0 343.0 L455.0 315.0 L415.0 315.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M455.0 343.0 L495.0 343.0 L495.0 315.0 L455.0 315.0 z"/>
+    <path stroke="none" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="#000000" d="M250.0 112.0 L255.0 126.0 L260.0 112.0 z"/>
+    <path stroke="none" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="#000000" d="M80.0 196.0 L90.0 203.0 L80.0 210.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M310.0 301.0 L319.0 301.0 "/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M340.0 301.0 L349.0 301.0 "/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M255.0 98.0 L255.0 119.0 "/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M255.0 63.0 L255.0 83.0 "/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M525.0 203.0 L495.0 203.0 "/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M545.0 203.0 L565.0 203.0 "/>
+    <text x="115" y="180" font-family="Courier" font-size="13" stroke="none" fill="#000000">wikipedia.parsed</text>
+    <text x="138" y="306" font-family="Courier" font-size="13" stroke="none" fill="#000000">wikipedia.parsed.count by domain</text>
+    <text x="235" y="334" font-family="Courier" font-size="13" stroke="none" fill="#000000">6 </text>
+    <text x="155" y="208" font-family="Courier" font-size="13" stroke="none" fill="#000000">8 </text>
+    <text x="195" y="334" font-family="Courier" font-size="13" stroke="none" fill="#000000">7 </text>
+    <text x="117" y="208" font-family="Courier" font-size="13" stroke="none" fill="#000000">. </text>
+    <text x="315" y="334" font-family="Courier" font-size="13" stroke="none" fill="#000000">4 </text>
+    <text x="61" y="362" font-family="Courier" font-size="13" stroke="none" fill="#000000">Kafka Cluster</text>
+    <text x="275" y="334" font-family="Courier" font-size="13" stroke="none" fill="#000000">5 </text>
+    <text x="211" y="152" font-family="Courier" font-size="13" stroke="none" fill="#000000">Connector</text>
+    <text x="315" y="208" font-family="Courier" font-size="13" stroke="none" fill="#000000">4 </text>
+    <text x="213" y="54" font-family="Courier" font-size="13" stroke="none" fill="#000000">Wikipedia</text>
+    <text x="275" y="208" font-family="Courier" font-size="13" stroke="none" fill="#000000">5 </text>
+    <text x="155" y="334" font-family="Courier" font-size="13" stroke="none" fill="#000000">8 </text>
+    <text x="235" y="208" font-family="Courier" font-size="13" stroke="none" fill="#000000">6 </text>
+    <text x="117" y="334" font-family="Courier" font-size="13" stroke="none" fill="#000000">. </text>
+    <text x="195" y="208" font-family="Courier" font-size="13" stroke="none" fill="#000000">7 </text>
+    <text x="475" y="208" font-family="Courier" font-size="13" stroke="none" fill="#000000">0 </text>
+    <text x="435" y="208" font-family="Courier" font-size="13" stroke="none" fill="#000000">1 </text>
+    <text x="395" y="208" font-family="Courier" font-size="13" stroke="none" fill="#000000">2 </text>
+    <text x="355" y="208" font-family="Courier" font-size="13" stroke="none" fill="#000000">3 </text>
+    <text x="610" y="208" font-family="Courier" font-size="13" stroke="none" fill="#000000">KStreams Application</text>
+    <text x="395" y="334" font-family="Courier" font-size="13" stroke="none" fill="#000000">2 </text>
+    <text x="355" y="334" font-family="Courier" font-size="13" stroke="none" fill="#000000">3 </text>
+    <text x="475" y="334" font-family="Courier" font-size="13" stroke="none" fill="#000000">0 </text>
+    <text x="435" y="334" font-family="Courier" font-size="13" stroke="none" fill="#000000">1 </text>
+  </g>
+</svg></p><h3 class="mume-header" id="kstreams-api">KStreams API</h3>
+
+<ul>
+<li>
+<p>DSL API<br>
+<a href="https://kafka.apache.org/28/documentation/streams/developer-guide/dsl-api.html">https://kafka.apache.org/28/documentation/streams/developer-guide/dsl-api.html</a></p>
+</li>
+<li>
+<p>Processor API<br>
+<a href="https://kafka.apache.org/documentation/streams/developer-guide/processor-api.html">https://kafka.apache.org/documentation/streams/developer-guide/processor-api.html</a></p>
+</li>
+</ul>
+<h4 class="mume-header" id="dsl-example">DSL Example</h4>
+
+<pre data-role="codeBlock" data-info="java" class="language-java">    builder<span class="token punctuation">.</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">GenericRecord</span><span class="token punctuation">&gt;</span></span><span class="token function">stream</span><span class="token punctuation">(</span>INPUT_TOPIC<span class="token punctuation">)</span>
+       <span class="token comment">// INPUT_TOPIC has no key so use domain as the key</span>
+       <span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> value<span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token keyword">new</span> <span class="token class-name">KeyValue</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token class-name">GenericRecord</span><span class="token punctuation">)</span>value<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>META<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>META_DOMAIN<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">)</span>
+       <span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> value<span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token operator">!</span><span class="token punctuation">(</span><span class="token keyword">boolean</span><span class="token punctuation">)</span>value<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>BOT<span class="token punctuation">)</span><span class="token punctuation">)</span>
+       <span class="token punctuation">.</span><span class="token function">groupByKey</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+       <span class="token punctuation">.</span><span class="token function">count</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+       <span class="token punctuation">.</span><span class="token function">mapValues</span><span class="token punctuation">(</span><span class="token class-name">WikiFeedMetric</span><span class="token operator">::</span><span class="token keyword">new</span><span class="token punctuation">)</span>
+       <span class="token punctuation">.</span><span class="token function">toStream</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+       <span class="token punctuation">.</span><span class="token function">peek</span><span class="token punctuation">(</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> value<span class="token punctuation">)</span> <span class="token operator">-&gt;</span> logger<span class="token punctuation">.</span><span class="token function">debug</span><span class="token punctuation">(</span><span class="token string">&quot;{}:{}&quot;</span><span class="token punctuation">,</span> key<span class="token punctuation">,</span> value<span class="token punctuation">.</span><span class="token function">getEditCount</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+       <span class="token punctuation">.</span><span class="token keyword">to</span><span class="token punctuation">(</span>OUTPUT_TOPIC<span class="token punctuation">,</span> <span class="token class-name">Produced</span><span class="token punctuation">.</span><span class="token keyword">with</span><span class="token punctuation">(</span><span class="token class-name">Serdes<span class="token punctuation">.</span>String</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> metricSerde<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</pre><h2 class="mume-header" id="references">References</h2>
+
+<ol>
+<li><strong>Apache Kafka</strong> <a href="https://kafka.apache.org/intro">https://kafka.apache.org/intro</a></li>
+<li><strong>Streams Concepts</strong> <a href="https://docs.confluent.io/current/streams/concepts.html">https://docs.confluent.io/current/streams/concepts.html</a></li>
+<li><strong>Streaming 101</strong> <a href="https://www.oreilly.com/radar/the-world-beyond-batch-streaming-101/">https://www.oreilly.com/radar/the-world-beyond-batch-streaming-101/</a></li>
+<li><strong>Apache Avro Specification</strong> <a href="https://avro.apache.org/docs/current/spec.html">https://avro.apache.org/docs/current/spec.html</a></li>
+<li><strong>Avro4s</strong> <a href="https://github.com/sksamuel/avro4s">https://github.com/sksamuel/avro4s</a></li>
+<li><strong>Mastering Kafka Streams and ksqlDB</strong> <a href="https://www.confluent.io/resources/ebook/mastering-kafka-streams-and-ksqldb/">https://www.confluent.io/resources/ebook/mastering-kafka-streams-and-ksqldb/</a></li>
+</ol>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
