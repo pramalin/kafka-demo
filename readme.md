@@ -62,8 +62,10 @@ This demo uses 15 docker images.
 **Control Center**: http://192.168.1.110:9021/
 Log in as userName/password: superUser/superUser
 
-**Kibana** http://localhost:5601/app/dashboards#/view/Overview
+**Kibana** http://192.168.1.110:5601/app/dashboards#/view/Overview
 
+
+**Note:** This should be a localhost or your host IP.
 #### Kafka Streaming Platform
 **Distributed System**  
 The following diagram illustrates how the Kafka cluster is organized. Kafka cluster is made up of
